@@ -1,0 +1,46 @@
+{
+  "name": "cmt",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^4.2.1",
+    "apollo-boost": "^0.4.3",
+    "classnames": "^2.2.6",
+    "graphql-tag": "^2.10.1",
+    "moment": "^2.24.0",
+    "node-sass": "^4.12.0",
+    "react": "^16.8.6",
+    "react-apollo": "^2.5.8",
+    "react-bootstrap": "^1.0.0-beta.11",
+    "react-datepicker2": "^3.0.3",
+    "react-dom": "^16.8.6",
+    "react-multi-carousel": "^2.2.2",
+    "react-scripts": "3.0.1",
+    "reactstrap": "^8.0.1",
+    "styled-components": "^4.3.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "graphql": "^14.4.2"
+  }
+}

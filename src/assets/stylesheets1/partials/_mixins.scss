@@ -1,0 +1,192 @@
+// breakpoints   
+$sm: 576px; // Small tablets and large smartphones (landscape view)
+$md: 768px; // Small tablets (portrait view)
+$lg: 992px; // Tablets and small desktops
+$xl: 1200px; // Large tablets and desktops
+$tab: 650px; //Galaxy Tab
+
+$mx-ipad: 767px; //Below ipad and mobileonly
+
+// media queries
+@mixin breakpoint($canvas) {
+    @if $canvas==sm {
+        @media only screen and (min-width: $sm) {
+            @content;
+        }
+    }
+
+    @else if $canvas==md {
+        @media only screen and (min-width: $md) {
+            @content;
+        }
+    }
+
+    @else if $canvas==lg {
+        @media (min-width: $lg) {
+            @content;
+        }
+    }
+
+    @else if $canvas==xl {
+        @media only screen and (min-width: $xl) {
+            @content;
+        }
+    }
+
+    @else if $canvas==iPad {
+        @media only screen and (min-width: $md) and (max-width: 1024px) and (orientation: portrait) {
+            @content;
+        }
+    }
+
+    @else if $canvas==iPad-landscape {
+        @media only screen and (min-width: $md) and (max-width: 1024px) and (orientation: landscape) {
+            @content;
+        }
+    }
+
+    @else if $canvas==iPhone-landscape {
+        @media only screen and (min-width: 375px) and (max-width: 812px) and (orientation: landscape) {
+            @content;
+        }
+    }
+}
+
+@mixin breakpoint-max($canvas) {
+    @if $canvas==sm-mx {
+        @media only screen and (max-width: $sm) {
+            @content;
+        }
+    }
+
+    @else if $canvas==md-mx {
+        @media only screen and (max-width: $md) {
+            @content;
+        }
+    }
+
+    @else if $canvas==lg-mx {
+        @media only screen and (max-width: $lg) {
+            @content;
+        }
+    }
+
+    @else if $canvas==tab-mx {
+        @media only screen and (max-width: $tab) {
+            @content;
+        }
+    }
+
+    @else if $canvas==b-iPad {
+        @media only screen and (max-width: $mx-ipad) {
+            @content;
+        }
+    }
+
+}
+
+// Placeholder Mixins
+@mixin placeholder {
+    &.placeholder {
+        @content;
+    }
+
+    &:-moz-placeholder {
+        @content;
+    }
+
+    &::-moz-placeholder {
+        @content;
+    }
+
+    &::-webkit-input-placeholder {
+        @content;
+    }
+}
+
+@mixin user-select ($value: none) {
+    -webkit-user-select: $value;
+    -moz-user-select: $value;
+    -ms-user-select: $value;
+    user-select: $value;
+}
+
+@mixin transform($transforms) {
+    -moz-transform: $transforms;
+    -o-transform: $transforms;
+    -ms-transform: $transforms;
+    -webkit-transform: $transforms;
+    transform: $transforms;
+}
+
+@mixin rotate ($deg) {
+    @include transform(rotate(#{$deg}deg));
+}
+
+@mixin transition($transition...) {
+    -moz-transition: $transition;
+    -o-transition: $transition;
+    -webkit-transition: $transition;
+    transition: $transition;
+}
+
+@mixin appearance ($value) {
+    -webkit-appearance: $value;
+    -moz-appearance: $value;
+    appearance: $value;
+}
+
+@mixin box-sizing ($value) {
+    -webkit-box-sizing: $value;
+    -moz-box-sizing: $value;
+    box-sizing: $value;
+}
+
+@mixin clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+}
+
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+    @if $inset {
+        -webkit-box-shadow: inset $top $left $blur $color;
+        -moz-box-shadow: inset $top $left $blur $color;
+        box-shadow: inset $top $left $blur $color;
+    }
+
+    @else {
+        -webkit-box-shadow: $top $left $blur $color;
+        -moz-box-shadow: $top $left $blur $color;
+        box-shadow: $top $left $blur $color;
+    }
+}
+
+
+/*Gradient Background*/
+@mixin horizontal-gradient($from, $to, $stop: 100%) {
+    background-color: $from;
+    background-image: -moz-linear-gradient(left, $from 0%, $to $stop);
+    /* Firefox 3.6+ */
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(0%, $from), color-stop($stop, $to));
+    /* Safari 4+, Chrome 1+ */
+    background-image: -webkit-linear-gradient(left, $from 0%, $to $stop);
+    /* Safari 5.1+, Chrome 10+ */
+    background-image: -o-linear-gradient(left, $from 0%, $to $stop);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(left, $from 0%, $to $stop);
+    /* IE10+ */
+    background: linear-gradient(to right, $from 0%, $to $stop);
+    /* Standard */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$from', endColorstr='$to', GradientType=1);
+    /* IE6-9 */
+}

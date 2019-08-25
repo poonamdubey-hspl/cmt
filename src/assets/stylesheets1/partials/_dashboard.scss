@@ -1,0 +1,564 @@
+.content-area {
+    .wrapper {
+        .dashbord {
+            .row {
+                &:nth-child(2) {
+                    .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6 {
+                        display: flex;
+                        flex-direction: column;
+                    }
+                }
+            }
+
+            @media screen and (max-width: $medium-width) {
+                padding: 10px 0;
+            }
+
+            .training-courses {
+                background: #fff;
+                flex: 1;
+                position: relative;
+                padding-bottom: 60px;
+
+                .sub-heading {
+                    font-size: 20px;
+                    padding: 15px;
+                }
+
+                .btn-block {
+                    position: absolute;
+                    right: 15px;
+                    top: 24px;
+                    width: auto;
+
+                    @media screen and (max-width: $mobile-width) {
+                        top: auto;
+                        bottom: 10px;
+                    }
+
+                    a.btn.btn-primary {
+                        @media screen and (max-width: $laptop-width) {
+                            font-size: 14px;
+                            padding: 3px 5px;
+                        }
+                    }
+                }
+
+                .card-body {
+                    @media screen and (max-width: $mobile-width) {
+                        margin-bottom: 40px;
+                    }
+                }
+
+                .main-tabcontent {
+                    .card-body {
+                        @media screen and (max-width: $mobile-width) {
+                            margin-bottom: 55px;
+                        }
+                    }
+                }
+
+                .card.listView {
+                    padding: 15px;
+                    align-items: flex-end;
+                    flex-direction: row;
+                    align-items: self-start;
+                    position: relative;
+
+                    @media screen and (max-width: $desktop-width) {
+                        align-items: center;
+                        padding: 10px 15px;
+                    }
+
+                    @media screen and (max-width: $mobile-width) {
+                        align-items: end;
+                    }
+
+                    .card-img-top {
+                        width: auto;
+                        height: 81px;
+                        max-width: 147px;
+
+                        @media screen and (max-width: $desktop-width) {
+                            height: 5wh;
+                        }
+
+                        @media screen and (max-width: $tablet-width) {
+                            height: 49px;
+                        }
+                    }
+                }
+
+                .view-all {
+                    position: absolute;
+                    width: auto;
+                    bottom: 0;
+                    right: 0;
+                    left: 0;
+                    margin: 0 auto;
+                }
+            }
+
+            .main-tabs {
+                margin-left: 15px;
+
+                li {
+                    &.nav-item {
+                        margin-right: 3px;
+                        margin-bottom: 6px;
+
+                        &:first-child {
+                            a {
+                                &::before {
+                                    content: " ";
+                                    height: 15px;
+                                    width: 1px;
+                                    background: #000;
+                                    position: absolute;
+                                    right: 5px;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                }
+                            }
+                        }
+
+                        a {
+                            display: block;
+                            font-size: 18px;
+                            border-bottom: none;
+                            position: relative;
+
+                            &.active {
+                                color: #2A2D38;
+
+                                &::after {
+                                    content: " ";
+                                    width: 50px;
+                                    height: 3px;
+                                    background: #2bc975;
+                                    position: absolute;
+                                    bottom: 0;
+                                    left: 0;
+                                    margin: 0 auto;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .heading-block {
+                h3 {
+                    font-size: 21px;
+                    margin-bottom: 20px;
+                }
+
+                &.flex-column {
+                    flex-direction: column;
+
+                    .sub-heading {
+                        span {
+                            font-size: 20px;
+                            margin-bottom: 10px;
+                            display: flex;
+                        }
+                    }
+                }
+            }
+
+            .main-tabcontent {
+                .card {
+                    &.listView {
+                        padding: 15px;
+
+                        @media screen and (max-width: $laptop-width) {
+                            padding-bottom: 22px;
+                            align-items: flex-start;
+                            margin: 0;
+                        }
+
+                        img {
+                            height: 5vw;
+                            max-width: 150px;
+
+                            @media screen and (max-width: $tablet-width) {
+                                height: 10vw;
+                            }
+                        }
+
+                        .card-text {
+                            flex: 1;
+                        }
+                    }
+
+                    .card-body {
+                        @media screen and (max-width: $mobile-width) {
+                            margin-bottom: 30px;
+                        }
+
+                        h5 {
+                            margin-bottom: 0;
+
+                            @media screen and (max-width: $mobile-width) {
+                                min-height: 36px;
+                            }
+                        }
+
+                        .card-progress {
+                            flex-direction: column;
+
+                            @media screen and (max-width: $laptop-width) {
+                                margin-top: 0;
+                            }
+
+                            .progress {
+                                margin: 5px 0;
+                                min-width: 150px;
+
+                                @media screen and (max-width: $mobile-width) {
+                                    min-width: 120px;
+                                }
+                            }
+
+                            .progress-block {
+                                display: flex;
+                                align-items: center;
+
+                                .status {
+                                    margin-left: 10px;
+                                    margin-top: 0;
+
+                                    @media screen and (max-width: $mobile-width) {
+                                        margin-top: 0;
+                                    }
+                                }
+                            }
+                        }
+
+                        .card-text {
+                            margin-bottom: 0;
+
+                            @media screen and (max-width: $mobile-width) {
+                                position: absolute;
+                                left: 15px;
+                                bottom: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .card {
+                &.listView {
+                    align-items: flex-end;
+
+                    img {
+
+                        @media screen and (max-width: $tablet-width) {
+                            height: 10vw;
+                        }
+                    }
+                }
+
+                &.edit-block,
+                &.progress-card {
+                    flex-direction: row;
+                    padding: 15px;
+                    align-items: center;
+                    height: 200px;
+
+                    @media screen and (max-width: $tablet-width) {
+                        padding: 20px 5px;
+                        height: auto;
+                    }
+
+                    &.progress-card {
+                        .card-body {
+                            padding: 23px;
+
+                            @media screen and (max-width: $desktop-width) {
+                                padding: 0 14px;
+                            }
+
+                            @media screen and (max-width: $tablet-width) {
+                                padding: 0;
+                                padding-left: 5px;
+                            }
+
+                            .card-text {
+                                @media screen and (max-width: $mobile-width) {
+                                    width: 100%;
+                                }
+                            }
+                        }
+
+                        .no-data-found {
+                            span {
+                                font-size: 21px;
+                                vertical-align: middle;
+
+                                span {
+                                    font-size: 34px;
+                                    display: inline-block;
+                                    margin-bottom: 8px;
+                                    font-weight: 400;
+                                }
+                            }
+                        }
+                    }
+
+                    .card-body {
+                        text-align: left;
+                        /*align-items: end;*/
+                        position: relative;
+
+                        h5 {
+                            font-size: 21px;
+
+                            @media screen and (max-width: $mobile-width) {
+                                font-size: 18px;
+                            }
+                        }
+
+                        .card-text {
+                            flex: 0;
+                        }
+                    }
+                }
+
+                &.edit-block {
+                    .card-body {
+                        padding: 25px 10px !important;
+
+                        h5 {
+                            width: 170px;
+                        }
+                    }
+
+                    p {
+                        font-size: 16px;
+                    }
+
+                    img {
+                        &.round {
+                            max-width: 140px;
+                            height: 140px;
+                            width: 100%;
+
+                            @media screen and (max-width: $desktop-width) {
+                                max-width: 120px;
+                                height: 120px;
+                            }
+                        }
+                    }
+
+                    @media screen and (max-width: $medium-width) {
+                        display: none;
+                    }
+                }
+
+                .card-body {
+                    padding: 0 10px;
+                    flex-direction: column;
+                    height: 100%;
+                    align-items: flex-start;
+                    text-align: left;
+
+                    h5 {
+                        width: 100%;
+                        font-size: 15px;
+                        margin-bottom: 10px;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        max-width: 300px;
+                        height: auto;
+
+                        @media screen and (max-width: $desktop-width) {
+                            max-width: 200px;
+                        }
+
+                        @media screen and (max-width: $laptop-width) {
+                            width: 170px;
+                        }
+
+                        @media screen and (max-width: $tablet-width) {
+                            width: 100%;
+                        }
+
+                        @media screen and (max-width: $mobile-width) {
+                            white-space: normal;
+                            width: 100%;
+                        }
+                    }
+
+                    .card-text {
+                        width: 100%;
+                        text-align: left !important;
+                        margin-bottom: 0;
+
+                        @media screen and (max-width: $mobile-width) {
+                            flex: none;
+                            width: auto;
+                            margin-right: 15px;
+                        }
+                    }
+
+                    .main-cart-text {
+                        width: 100%;
+
+                        @media screen and (max-width: $desktop-width) {
+                            flex-direction: column;
+                        }
+
+                        @media screen and (max-width: $mobile-width) {
+                            position: absolute;
+                            bottom: 10px;
+                            left: 15px;
+                            display: flex;
+                            flex-direction: row !important;
+                            right: auto;
+                            margin: 0 auto;
+                        }
+
+                        .card-progress {
+                            flex-direction: column;
+                        }
+                    }
+                }
+
+                .cart-btn {
+                    @media screen and (max-width: $desktop-width) {
+                        position: absolute;
+                        right: 0;
+                        bottom: 8px;
+                    }
+                }
+
+                .progress-circle {
+                    padding: 10px;
+                    position: relative;
+
+                    @media screen and (max-width: $desktop-width) {
+                        padding: 9px;
+                    }
+
+                    @media screen and (max-width: $tablet-width) {
+                        padding: 0;
+                    }
+
+                    .circle {
+                        width: 120px;
+                        height: 120px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    canvas#canvas1 {
+                        @media screen and (max-width: $tablet-width) {
+                            width: 74px !important;
+                            height: 74px !important;
+                        }
+                    }
+
+                    .total-count {
+                        position: absolute;
+                        font-size: 38px;
+                        color: #A3AAC5;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        text-align: center;
+                        left: 0;
+                        right: 0;
+
+                        @media screen and (max-width: $tablet-width) {
+                            font-size: 21px;
+                        }
+                    }
+                }
+            }
+
+            .progress-card {
+                @media screen and (max-width: $mobile-width) {
+                    height: auto;
+                }
+
+                .card-text {
+                    width: 100%;
+                    font-size: 16px;
+
+                    @media screen and (max-width: $mobile-width) {
+                        width: 100%;
+                    }
+
+                    .row {
+                        @media screen and (max-width: $mobile-width) {
+                            margin: 0;
+                            width: 100%;
+                        }
+
+                        .col-4.col-sm-4.col-md-4.col-lg-4.col-xl-4 {
+                            @media screen and (max-width: $mobile-width) {
+                                padding: 0;
+                            }
+                        }
+                    }
+
+                    .courses-status {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+
+                        @media screen and (max-width: $tablet-width) {
+                            flex-direction: column;
+                            align-items: end;
+                        }
+                    }
+
+                    span {
+                        color: #5B627E;
+
+                        @media screen and (max-width: $mobile-width) {
+                            font-size: 14px;
+                        }
+
+                        &:first-child {
+                            font-size: 32px;
+                            margin-right: 5px;
+
+                            @media screen and (max-width: $tablet-width) {
+                                font-size: 24px;
+                                margin-right: 0;
+                            }
+                        }
+
+                        &.green {
+                            &::after {
+                                color: #46CD93;
+                            }
+                        }
+
+                        &.blue {
+
+                            &::after {
+                                color: #5985EE;
+                            }
+                        }
+
+                        &.peach {
+
+                            &::after {
+                                color: #FF9595;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+    a.canvasjs-chart-credit {
+        display: none;
+    }

@@ -1,0 +1,16 @@
+#yarn add
+
+create-react-app
+react-apollo
+@material-ui/core
+apollo-boost
+graphql
+node-sass
+reactstrap
+react-multi-carousel
+react-custom-scrollbars
+styled-components
+react-bootstrap
+classnames
+react-datepicker2
+moment

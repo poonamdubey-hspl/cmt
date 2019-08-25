@@ -1,0 +1,126 @@
+@font-face {
+  font-family: 'open_sansbold';
+  src: url('fonts/opensans-bold-webfont.woff2') format('woff2'),
+    url('fonts/opensans-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'open_sanslight';
+  src: url('fonts/opensans-light-webfont.woff2') format('woff2'),
+    url('fonts/opensans-light-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'open_sansregular';
+  src: url('fonts/opensans-regular-webfont.woff2') format('woff2'),
+    url('fonts/opensans-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background-color: $body-color;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  color: #333333;
+  font-family: 'open_sansregular';
+  font-size: 14px;
+  height: 100%;
+
+  .btn:focus,
+  button:focus,
+  .btn.focus,
+  .form-control:focus {
+    outline: 0;
+    box-shadow: none;
+    outline: none;
+  }
+
+  select::-ms-expand {
+    display: none;
+  }
+
+  .line-btn {
+    border: 1px solid $yc;
+    padding: 2px 5px;
+    font-size: 12px;
+    color: $yc;
+  }
+  
+  &>div {
+    height: 100%;
+  }
+}
+a {
+  text-decoration: none ;
+  color: #111;
+  &:hover{
+    text-decoration: none;
+    color: #111;
+  }
+  &.click-link{
+    color: #1A4B62;
+    font-weight: 600;
+  }
+}
+:focus {
+  outline: none !important;
+}
+button{
+  border: none;
+  box-shadow:none !important;
+}
+.disabled-btn {
+  color: #d2d2d2;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+footer {
+  background: $blueclor;
+  color: $wc;
+  padding: 10px 0;
+  @include breakpoint-max(md-mx) {
+    padding: 20px 0;
+  }
+  .footer-block {
+    display: flex;
+    justify-content: space-between;
+
+    @include breakpoint-max(md-mx) {
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .container-fluid {
+    height: 100%;
+  }
+
+  .row {
+    height: 100%;
+    align-items: center;
+  }
+}
+
+.fas  {
+  &:before {
+    font-family: FontAwesome;
+  }
+}

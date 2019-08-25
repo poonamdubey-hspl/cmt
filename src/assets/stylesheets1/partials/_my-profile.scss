@@ -1,0 +1,220 @@
+html {
+    height: 100%;
+}
+
+body {
+    .pop-up {
+        margin-top: 30px;
+
+        @media screen and (max-width: $tablet-width) {
+            margin-top: 0;
+        }
+
+        .btn-primary {
+            &.change-pass {
+                @media screen and (max-width: $tablet-width) {
+                    border: 1px solid #626ED4;
+                    color: #626ED4;
+                    background: transparent;
+                    border-radius: 20px;
+                    border-radius: 20px;
+                }
+            }
+        }
+
+        .modal-dialog {
+            max-width: 791px;
+            margin: 1.75rem auto;
+            height: 533px;
+
+            .modal-content {
+                padding: 20px 75px;
+                margin: 0 auto;
+                border: 0;
+
+                @media screen and (max-width: $tablet-width) {
+                    padding: 5px;
+                }
+
+                .modal-title {
+                    font-size: 26px;
+                }
+
+                .modal-header {
+                    .close {
+                        font-size: 40px;
+                        color: #5b627e !important;
+                        text-shadow: none;
+                        opacity: 1;
+                    }
+                }
+
+                .modal-body {
+                    p {
+                        font-size: 16px;
+                    }
+
+                    .form-control {
+                        background: #F1F1F2;
+                        border: 0;
+                        border-radius: 0;
+                    }
+
+                    .edit {
+                        border-radius: 5px;
+                    }
+                }
+
+                .modal-footer {
+                    justify-content: center;
+                }
+            }
+        }
+
+        .form-group {
+            margin: 20px 0;
+        }
+    }
+
+    .myprofile {
+        .wrapper {
+
+            .myprofile-container {
+                background: #fff;
+
+                @media screen and (max-width: $desktop-width) {
+                    padding: 0 20px;
+                }
+
+                .btn.edit {
+                    border-radius: 6px;
+                    margin-right: 20px;
+
+                    &.camera-block {
+                        @media screen and (max-width: $tablet-width) {
+                            border-radius: 50%;
+                            padding: 0;
+                            width: 35px;
+                            height: 35px;
+                            display: -ms-grid;
+                            display: grid;
+                            align-items: center;
+                            color: #fff;
+                            background: #626ed4;
+                            margin: 0;
+                            position: absolute;
+                            left: 87px;
+                            bottom: 0;
+                        }
+                    }
+
+                    .txt {
+                        @media screen and (max-width: $tablet-width) {
+                            display: none;
+                        }
+                    }
+
+                    .icon-photo-camera {
+                        display: none;
+
+                        @media screen and (max-width: $tablet-width) {
+                            display: block;
+                            position: absolute;
+                            left: 0;
+                            right: 0;
+                            margin: 0 auto;
+                        }
+                    }
+                }
+
+
+
+                .form-group-main {
+                    max-width: 800px;
+                    margin: 0 auto;
+
+
+
+                    .text-center {
+                        padding: 40px 0 60px;
+
+                        .btn-primary {
+                            max-width: 94px;
+                        }
+                    }
+
+                    .form-group {
+                        margin: 20px 0;
+
+                        .form-control {
+                            background: #F1F1F2;
+                            border: none;
+                            border-radius: 0;
+                        }
+                    }
+
+                    .border {
+                        border: none !important;
+                        border-bottom: 1px solid #dee2e6 !important;
+                        margin: 20px 0;
+                    }
+
+                    .main-edit-block {
+                        display: flex;
+                        align-items: center;
+                        padding: 40px 0 35px;
+                        border-bottom: 1px solid #eee;
+                        margin-bottom: 35px;
+                    }
+
+                    .edit-block {
+                        flex: 1;
+                        display: flex;
+                        align-items: center;
+                        position: relative;
+
+                        .edit-txt {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            margin-left: 30px;
+                            h5.card-title{
+                                margin-bottom:5px;
+                            }
+                            .card-title {
+                                @media screen and (max-width: $tablet-width) {
+                                    display: none;
+                                }
+                            }
+
+                            .form-group {
+                                position: relative;
+                                margin:5px 0;
+                                @media screen and (max-width: $tablet-width) {
+                                    position: static;
+                                }
+
+                                .form-control-file {
+                                    display: block;
+                                    width: 100%;
+                                    opacity: 0;
+                                    position: absolute;
+                                    height: 36px;
+                                    left: 0;
+                                    right: 0;
+
+                                    @media screen and (max-width: $tablet-width) {
+                                        left: 87px;
+                                        bottom: 0;
+                                        width: 35px;
+                                        z-index: 1;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

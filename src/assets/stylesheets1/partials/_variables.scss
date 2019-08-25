@@ -1,0 +1,27 @@
+ $wc:#fff; //white color
+ $fc:#333333; //navy blue color
+ $yc:#D59500;
+ $blueclor:#1A4B62; //blue color
+ $fblueclor:#80D7FF;
+ $dark-gray:#5A5B68; //dark-gray
+ $darkest-gray:#333547; //darkest gray
+ $body-color:#EEEEEE;
+ $border-color:#707070;
+ $green-color:#2BC975;
+
+ $box-shadow:0px 0px 5px -1px rgba(136, 136, 136, 0.46);
+ $normal-font-size:15px; //font-size
+ $heading-fs:22PX; //heading-font-size
+ 
+
+ @mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+       -moz-border-radius: $radius; 
+        -ms-border-radius: $radius;
+            border-radius: $radius;
+  } 
+  $mobile-width: 576px;
+  $tablet-width: 768px;
+  $medium-width: 990px;
+  $laptop-width: 1024px;
+  $desktop-width:1400px;
