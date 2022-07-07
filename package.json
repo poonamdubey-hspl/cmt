@@ -7,7 +7,7 @@
     "apollo-boost": "^0.4.3",
     "classnames": "^2.2.6",
     "graphql-tag": "^2.10.1",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "node-sass": "^4.12.0",
     "react": "^16.8.6",
     "react-apollo": "^2.5.8",
